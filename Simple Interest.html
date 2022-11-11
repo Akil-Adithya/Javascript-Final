@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Calculator</title>
+        <script>
+            function interest(){
+                p=parseInt(f1.tb1.value)
+                r=parseInt(f1.tb2.value)
+                t=parseInt(f1.tb3.value)
+                z=(p*r*t)/100
+                document.getElementById("tb4").value=z;
+            }
+        </script>
+        <style>
+            h2{
+                font-family:"Courier New";
+                text-align:center;
+                background-color:#6be7ad;
+                font-size:30px;
+            }
+            input[type=text] {
+                padding: 12px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                transition: width 2s ease-in-out;
+            }
+            label{
+                padding: 20px;
+                font-size: 20px;
+                font-family: 'Trebuchet MS';
+            }
+            input[type=text]:focus {
+                width: 100%;
+            }
+            input[type=button], input[type=submit], input[type=reset] {
+                background-color: #00ffbb;
+                border: none;
+                color: black;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-size: 20px;
+            }
+            input[type=submit]:hover {
+                background-color: #58ff63;
+            }
+        </style>
+        </style>
+    </head>
+    <body bgcolor="FFFDD1">
+        <form id="f1">
+            Enter Principle: <input type="text" id="tb1">
+            <br><br>
+            Enter Rate: <input type="text" id="tb2">
+            <br><br>
+            Enter Teme: <input type="text" id="tb3">
+            <br><br>
+            <button type="button" onclick="interest()"> Simple Interest </button><br><br>
+            Result: <input type="text" id="tb4">
+        </form>
+    </body>
+</html>
